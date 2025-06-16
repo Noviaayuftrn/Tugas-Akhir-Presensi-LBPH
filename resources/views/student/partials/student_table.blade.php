@@ -23,7 +23,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="5" class="text-center">Belum ada data siswa yang ditambahkan.</td>
+                                <td colspan="7" class="text-center">Belum ada data siswa yang ditambahkan.</td>
                             </tr>
                         @endforelse
                         

@@ -24,7 +24,7 @@
     </tr>
     @empty
     <tr>
-        <td colspan="5" class="text-center">Belum ada data guru yang ditambahkan.</td>
+        <td colspan="6" class="text-center">Belum ada data guru yang ditambahkan.</td>
     </tr>
 @endforelse
 
