@@ -98,19 +98,36 @@ class AttendanceController extends Controller
         ]);
     }
 
-    public function historySiswa()
+    public function historySiswa(Request $request)
     {
         $studentId = Auth::id();
 
-        $attendances = Attendance::with([
+        $query = Attendance::with([
             'schedule.subject',
             'schedule.teacher.user'
-        ])
-        ->where('user_id', $studentId)
-        ->latest()
-        ->paginate(20);
+        ])->where('user_id', $studentId);
 
-        return view('siswa.history_siswa', compact('attendances'));
+        // Filter berdasarkan mata pelajaran jika tersedia
+        if ($request->has('sub_id') && $request->sub_id != '') {
+            $query->whereHas('schedule', function ($q) use ($request) {
+                $q->where('sub_id', $request->sub_id);
+            });
+        }
+
+        $attendances = $query->latest()->paginate(20);
+
+        // Ambil semua mata pelajaran yang pernah diikuti siswa dari jadwal kehadiran
+        $subjects = Subject::whereIn('id', function ($query) use ($studentId) {
+            $query->select('sub_id')
+                ->from('schedules')
+                ->whereIn('id', function ($q2) use ($studentId) {
+                    $q2->select('schedule_id')
+                        ->from('attendances')
+                        ->where('user_id', $studentId);
+                });
+        })->get();
+
+        return view('siswa.history_siswa', compact('attendances', 'subjects'));
     }
 
 

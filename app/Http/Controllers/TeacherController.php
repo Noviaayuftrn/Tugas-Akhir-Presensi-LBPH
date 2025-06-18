@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Teacher;
@@ -140,6 +141,65 @@ class TeacherController extends Controller
 
         // Return HTML partial (view yang hanya berisi <tbody> tabel)
         return view('teacher.partials.teacher_table', compact('teachers'))->render();
+    }
+    
+    public function chartSeluruhKelas()
+    {
+        $result = DB::table('attendances')
+            ->join('students', 'attendances.user_id', '=', 'students.user_id')
+            ->join('classes', 'students.class_id', '=', 'classes.id')
+            ->select('classes.nama_kelas as kelas', DB::raw('count(*) as total'))
+            ->groupBy('kelas')
+            ->orderBy('kelas')
+            ->get();
+
+        return response()->json([
+            'labels' => $result->pluck('kelas'),
+            'data' => $result->pluck('total'),
+        ]);
+    }
+    public function chartPerkelas(Request $request)
+    {
+        $kelas = $request->kelas;
+        $skala = $request->skala;
+
+        $classMap = [
+            'kelasX' => 1,
+            'kelasXI' => 2,
+            'kelasXII' => 3,
+        ];
+
+        $class_id = $classMap[$kelas] ?? null;
+        if (!$class_id) {
+            return response()->json(['labels' => [], 'data' => []]);
+        }
+
+        $query = DB::table('attendances')
+            ->join('students', 'attendances.user_id', '=', 'students.user_id')
+            ->where('students.class_id', $class_id);
+
+        if ($skala === 'mingguan') {
+            $query->selectRaw("WEEK(created_at) as label, COUNT(*) as total")
+                ->groupBy(DB::raw("WEEK(created_at)"));
+        } elseif ($skala === 'bulanan') {
+            $query->selectRaw("DATE_FORMAT(created_at, '%M') as label, COUNT(*) as total")
+                ->groupBy(DB::raw("MONTH(created_at)"));
+        } elseif ($skala === 'semester') {
+            $query->selectRaw("
+                CASE 
+                    WHEN MONTH(created_at) <= 6 THEN 'Semester 1'
+                    ELSE 'Semester 2'
+                END as label, 
+                COUNT(*) as total")
+                ->groupBy('label');
+        }
+
+        $data = $query->orderBy('label')->get();
+
+        return response()->json([
+            'labels' => $data->pluck('label'),
+            'data' => $data->pluck('total'),
+        ]);
     }
 }
 

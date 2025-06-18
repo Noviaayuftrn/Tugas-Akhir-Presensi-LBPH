@@ -116,7 +116,7 @@
                                         <p class="card-title">Grafik Kehadiran Seluruh Kelas</p>
                                     </div>
                                     <p class="text-muted">Grafik ini menampilkan tren kehadiran siswa dari seluruh kelas (X, XI, XII) dari waktu ke waktu.</p>
-                                    <p class="text-muted text-center mb-1">Tahun 2025</p>
+                                    <!-- <p class="text-muted text-center mb-1">Tahun 2025</p> -->
                                     <div id="attendance-chart-all-legend" class="chartjs-legend mt-4 mb-2"></div>
                                     <canvas id="attendance-chart-all" height="100"></canvas>
                                     <hr class="my-4">

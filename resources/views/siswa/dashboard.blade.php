@@ -165,21 +165,21 @@
               <div class="d-flex flex-wrap gap-3 justify-content-start">
                 <div class="card card-tale" style="width: 150px; height: 150px;">
                   <div class="card-body text-center">
-                    <p class="mb-4" style="font-size: 16px;">Total Guru</p>
+                    <p class="mb-4" style="font-size: 16px;">Total Alpa</p>
                     <p class="fs-30 mb-2">{{ $totalAlpa }}</p>
                   </div>
                 </div>
               
                 <div class="card card-dark-blue" style="width: 150px; height: 150px;">
                   <div class="card-body text-center">
-                    <p class="mb-4" style="font-size: 16px;">Total Siswa</p>
+                    <p class="mb-4" style="font-size: 16px;">Total Sakit</p>
                     <p class="fs-30 mb-2">{{ $totalSakit }}</p>
                   </div>
                 </div>
               
                 <div class="card card-light-blue" style="width: 150px; height: 150px;">
                   <div class="card-body text-center">
-                    <p class="mb-4" style="font-size: 16px;">Total Mapel</p>
+                    <p class="mb-4" style="font-size: 16px;">Total Izin</p>
                     <p class="fs-30 mb-2">{{ $totalIzin }}</p>
                   </div>
                 </div>

@@ -117,6 +117,21 @@
               <div class="form-group">
               </div>
               <h4 class="mb-3">Catatan Kehadiran</h4>
+              <form method="GET" action="{{ route('student..history') }}" class="mb-4">
+                <div class="d-flex align-items-center gap-2">
+                  <select name="sub_id" id="sub_id" class="form-select" style="width: 300px; color: black;">
+                    <option value="" {{ request('sub_id') == '' ? 'selected' : '' }} disabled hidden>Pilih Mata Pelajaran</option>
+                    <option value="">Semua Mata Pelajaran</option>
+                    @foreach ($subjects as $subject)
+                      <option value="{{ $subject->id }}" {{ request('sub_id') == $subject->id ? 'selected' : '' }}>
+                        {{ $subject->nama_mapel }}
+                      </option>
+                    @endforeach
+                  </select>
+                  <button type="submit" class="btn btn-primary">Tampilkan</button>
+                </div>
+              </form>
+              <br>
               <table class="table table-bordered">
                 <thead>
                   <tr>

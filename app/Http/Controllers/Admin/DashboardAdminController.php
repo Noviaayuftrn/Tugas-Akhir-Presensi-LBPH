@@ -5,16 +5,26 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Models\Teacher;
+use App\Models\Student;
+use App\Models\Subject;
+use App\Models\Major;
+use App\Models\Classes;
+use App\Models\Attendance;
+use App\Models\Schedule;
+use Carbon\Carbon;
 
 class DashboardAdminController extends Controller
 {
     public function index() : View
     {
-        $totalGuru = 10;
-        $totalSiswa = 120;
-        $totalMapel = 8;
+        $totalGuru = Teacher::count();
+        $totalSiswa = Student::count();
+        $totalMapel = Subject::count();
+        $totalJurusan = Major::count();
+        $totalKelas = Classes::count();
 
-        return view('admin.dashboard', compact('totalGuru', 'totalSiswa', 'totalMapel'));
+        return view('admin.dashboard', compact('totalGuru', 'totalSiswa', 'totalMapel', 'totalJurusan', 'totalKelas'));
     }
 
     public function dashboardGuru() : View
@@ -22,12 +32,15 @@ class DashboardAdminController extends Controller
         return view('guru.dashboard');
     }
 
-    public function dashboardSiswa() : View
+    public function dashboardSiswa(): View
     {
-        $totalAlpa = 10; // Ganti dengan logika untuk menghitung total guru
-        $totalSakit = 120; // Ganti dengan logika untuk menghitung total siswa
-        $totalIzin = 8; // Ganti dengan logika untuk menghitung total mata pelajaran
+        $userId = auth()->id();
+
+        $totalAlpa = Attendance::where('user_id', $userId)->where('status', 'alpa')->count();
+        $totalSakit = Attendance::where('user_id', $userId)->where('status', 'sakit')->count();
+        $totalIzin = Attendance::where('user_id', $userId)->where('status', 'izin')->count();
 
         return view('siswa.dashboard', compact('totalAlpa', 'totalSakit', 'totalIzin'));
-    }
+    }    
+
 }

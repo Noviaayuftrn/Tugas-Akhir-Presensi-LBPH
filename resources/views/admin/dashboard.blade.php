@@ -53,27 +53,6 @@
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
           <a class="dropdown-item preview-item">
             <div class="preview-thumbnail">
-              <div class="preview-icon bg-success">
-                <i class="ti-info-alt mx-0"></i>
-              </div>
-            </div>
-            <div class="preview-item-content">
-            </div>
-          </a>
-          <a class="dropdown-item preview-item">
-            <div class="preview-thumbnail">
-              <div class="preview-icon bg-warning">
-                <i class="ti-settings mx-0"></i>
-              </div>
-            </div>
-            <div class="preview-item-content">
-            </div>
-          </a>
-          <a class="dropdown-item preview-item">
-            <div class="preview-thumbnail">
-              <div class="preview-icon bg-info">
-                <i class="ti-user mx-0"></i>
-              </div>
             </div>
             <div class="preview-item-content">
             </div>
@@ -118,7 +97,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('teacher.index') }}" aria-controls="form-elements">
+      <a class="nav-link" href="{{ route('teacher.index') }}">
         <i class="icon-briefcase menu-icon"></i>
         <span class="menu-title">Guru</span>
         <!-- <i class="menu-arrow"></i> -->
@@ -163,14 +142,6 @@
                   <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                     <h3 class="font-weight-bold">Selamat Datang, Admin</h3>
                   </div>
-                  <div class="col-12 col-xl-4">
-                    <div class="justify-content-end d-flex">
-                      <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -181,20 +152,31 @@
                   <p class="fs-30 mb-2">{{ $totalGuru }}</p>
                 </div>
               </div>
-            
               <div class="card card-dark-blue" style="width: 150px; height: 150px;">
                 <div class="card-body text-center">
                   <p class="mb-4" style="font-size: 16px;">Total Siswa</p>
                   <p class="fs-30 mb-2">{{ $totalSiswa }}</p>
                 </div>
               </div>
-            
               <div class="card card-light-blue" style="width: 150px; height: 150px;">
                 <div class="card-body text-center">
                   <p class="mb-4" style="font-size: 16px;">Total Mapel</p>
                   <p class="fs-30 mb-2">{{ $totalMapel }}</p>
                 </div>
               </div>
+              <div class="card card-dark-blue" style="width: 150px; height: 150px;">
+                <div class="card-body text-center">
+                  <p class="mb-4" style="font-size: 16px;">Total Jurusan</p>
+                  <p class="fs-30 mb-2">{{ $totalJurusan }}</p>
+                </div>
+              </div>
+              <div class="card card-light-blue" style="width: 150px; height: 150px;">
+                <div class="card-body text-center">
+                  <p class="mb-4" style="font-size: 16px;">Total Kelas</p>
+                  <p class="fs-30 mb-2">{{ $totalKelas }}</p>
+                </div>
+              </div>
+
             </div>
   <footer class="text-center py-3 mt-5">
     <div class="d-flex justify-content-center">
