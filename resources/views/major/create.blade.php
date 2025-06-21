@@ -77,22 +77,6 @@
           </a>
         </div>
       </li>
-      <!-- <li class="nav-item nav-profile dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-          <img src="../../assets/images/faces/face28.jpg" alt="profile" />
-        </a>
-        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-          <a class="dropdown-item">
-            <i class="ti-settings text-primary"></i> Settings </a>
-          <a class="dropdown-item">
-            <i class="ti-power-off text-primary"></i> Logout </a>
-        </div>
-      </li> -->
-      <!-- <li class="nav-item nav-settings d-none d-lg-flex">
-        <a class="nav-link" href="#">
-          <i class="icon-ellipsis"></i>
-        </a>
-      </li> -->
     </ul>
     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
       <span class="icon-menu"></span>
@@ -108,20 +92,6 @@
       <a class="nav-link" href="{{ route('admin.dashboard') }}">
         <i class="icon-grid menu-icon"></i>
         <span class="menu-title">Dashboard</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('teacher.index') }}" aria-controls="form-elements">
-        <i class="icon-briefcase menu-icon"></i>
-        <span class="menu-title">Guru</span>
-        <!-- <i class="menu-arrow"></i> -->
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('student.index') }}">
-        <i class="icon-head menu-icon"></i>
-        <span class="menu-title">Siswa</span>
-        <!-- <i class="menu-arrow"></i> -->
       </a>
     </li>
     <li class="nav-item">
@@ -145,33 +115,20 @@
           <!-- <i class="menu-arrow"></i> -->
       </a>
     </li>
-  
-      <!-- <div class="collapse" id="auth">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
-        </ul>
-      </div>
-    </li> -->
-    <!-- <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-        <i class="icon-ban menu-icon"></i>
-        <span class="menu-title">Error pages</span>
-        <i class="menu-arrow"></i>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('student.index') }}">
+        <i class="icon-head menu-icon"></i>
+        <span class="menu-title">Siswa</span>
+        <!-- <i class="menu-arrow"></i> -->
       </a>
-      <div class="collapse" id="error">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
-        </ul>
-      </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../../../docs/documentation.html">
-        <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Documentation</span>
+      <a class="nav-link" href="{{ route('teacher.index') }}">
+        <i class="icon-briefcase menu-icon"></i>
+        <span class="menu-title">Guru</span>
+        <!-- <i class="menu-arrow"></i> -->
       </a>
-    </li> -->
+    </li>  
   </ul>
 </nav>
         <!-- partial -->
@@ -182,56 +139,6 @@
               </div>
               <div class="col-md-6 grid-margin stretch-card">
               </div>
-              <!-- <div class="form-group">
-                <label for="jurusanSelect">Jurusan</label>
-                <select class="form-select" id="jurusanSelect">
-                  <option selected disabled>Pilih Jurusan</option>
-                  <option style="color: black;">Desain Komunikasi Visual / Multimedia</option>
-                  <option style="color: black;">Teknik Ketenagalistrikan</option>
-                  <option style="color: black;">Teknik Mesin</option>
-                  <option style="color: black;">Teknik Otomotif</option>
-                  <option style="color: black;">Teknik Komputer Jaringan</option>
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <label for="kelasSelect">Kelas</label>
-                <select class="form-select" id="kelasSelect">
-                  <option selected disabled>Pilih Kelas</option>
-                  <option style="color: black;">X</option>
-                  <option style="color: black;">XI</option>
-                  <option style="color: black;">XII</option>
-                </select>
-              </div>
-              <a href="src/pages/forms/tambahguru.html" class="btn btn-primary mb-3">Tambah Guru</a>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>NIP</th>
-                    <th>Nama</th>
-                    <th>Mata Pelajaran</th>
-                    <th>Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>12345678</td>
-                    <td>Bu Siti</td>
-                    <td>Matematika</td>
-                    <td>
-                      <button class="btn btn-sm btn-info me-1" title="Lihat">
-                        <i class="fas fa-eye"></i>
-                      </button>
-                      <button class="btn btn-sm btn-warning me-1" title="Edit">
-                        <i class="fas fa-edit"></i>
-                      </button>
-                      <button class="btn btn-sm btn-danger" title="Hapus">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table> -->
               <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">

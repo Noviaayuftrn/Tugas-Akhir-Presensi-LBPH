@@ -122,20 +122,6 @@
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
-    <!-- <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-        <i class="icon-layout menu-icon"></i>
-        <span class="menu-title">UI Elements</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="ui-basic">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a></li>
-          <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dropdowns.html">Dropdowns</a></li>
-          <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a></li>
-        </ul>
-      </div>
-    </li> -->
     <li class="nav-item">
       <a class="nav-link" href="{{ route('attendance.guru_index') }}" aria-controls="form-elements">
         <i class="icon-book menu-icon"></i>
@@ -153,33 +139,6 @@
         <span class="menu-title">Laporan</span>
       </a>
     </li>
-  
-      <!-- <div class="collapse" id="auth">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
-        </ul>
-      </div>
-    </li> -->
-    <!-- <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-        <i class="icon-ban menu-icon"></i>
-        <span class="menu-title">Error pages</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="error">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
-          <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="../../../docs/documentation.html">
-        <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Documentation</span>
-      </a>
-    </li> -->
   </ul>
 </nav>
         <!-- partial -->
@@ -248,55 +207,6 @@
                   @endforeach
                 </tbody>
               </table>
-              <!-- <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Tambah Data Guru</h4>
-                    <p class="card-description"> Basic form elements </p>
-                    <form class="forms-sample">
-                      <div class="form-group">
-                        <label for="nip">NIP</label>
-                        <input type="text" class="form-control" id="nip" placeholder="NIP">
-                      </div>
-                      <div class="form-group">
-                        <label for="namaguru">Nama Guru</label>
-                        <input type="text" class="form-control" id="namaguru" placeholder="Nama">
-                      </div>
-                      <div class="form-group">
-                        <label for="pilihjurusan">Jurusan</label>
-                        <select class="form-select" id="pilihjurusan">
-                          <option selected disabled>Pilih Jurusan</option>
-                          <option style="color: black;">Desain Komunikasi Visual / Multimedia</option>
-                          <option style="color: black;">Teknik Ketenagalistrikan</option>
-                          <option style="color: black;">Teknik Mesin</option>
-                          <option style="color: black;">Teknik Otomotif</option>
-                          <option style="color: black;">Teknik Komputer Jaringan</option>        
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="pilihkelas">Kelas</label>
-                        <select class="form-select" id="pilihkelas">
-                          <option selected disabled>Pilih Kelas</option>
-                          <option style="color: black;">X</option>
-                          <option style="color: black;">XI</option>
-                          <option style="color: black;">XII</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="pilihmapel">Mata Pelajaran</label>
-                        <select class="form-select" id="pilihmapel">
-                          <option selected disabled>Pilih Mapel</option>
-                          <option style="color: black;">Mapel1</option>
-                          <option style="color: black;">Mapel2</option>
-                          <option style="color: black;">Mapel3</option>
-                        </select>
-                      </div>
-                      <button type="submit" class="btn btn-primary me-2">Simpan</button>
-                      <button class="btn btn-danger" style="color: white;">Kembali</button>
-                    </form>
-                  </div>
-                </div>
-              </div> -->
             </div>
           </div>
           <!-- content-wrapper ends -->

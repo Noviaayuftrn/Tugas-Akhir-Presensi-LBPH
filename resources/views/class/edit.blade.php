@@ -98,24 +98,10 @@
         <!-- partial:../../partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
-    <li class="nav-item">
+        <li class="nav-item">
       <a class="nav-link" href="{{ route('admin.dashboard') }}">
         <i class="icon-grid menu-icon"></i>
         <span class="menu-title">Dashboard</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('teacher.index') }}" aria-controls="form-elements">
-        <i class="icon-briefcase menu-icon"></i>
-        <span class="menu-title">Guru</span>
-        <!-- <i class="menu-arrow"></i> -->
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('student.index') }}">
-        <i class="icon-head menu-icon"></i>
-        <span class="menu-title">Siswa</span>
-        <!-- <i class="menu-arrow"></i> -->
       </a>
     </li>
     <li class="nav-item">
@@ -139,7 +125,20 @@
           <!-- <i class="menu-arrow"></i> -->
       </a>
     </li>
-  
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('student.index') }}">
+        <i class="icon-head menu-icon"></i>
+        <span class="menu-title">Siswa</span>
+        <!-- <i class="menu-arrow"></i> -->
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('teacher.index') }}">
+        <i class="icon-briefcase menu-icon"></i>
+        <span class="menu-title">Guru</span>
+        <!-- <i class="menu-arrow"></i> -->
+      </a>
+    </li>  
   </ul>
 </nav>
         <!-- partial -->

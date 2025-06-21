@@ -88,20 +88,6 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('teacher.index') }}" aria-controls="form-elements">
-          <i class="icon-briefcase menu-icon"></i>
-          <span class="menu-title">Guru</span>
-          <!-- <i class="menu-arrow"></i> -->
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('student.index') }}">
-          <i class="icon-head menu-icon"></i>
-          <span class="menu-title">Siswa</span>
-          <!-- <i class="menu-arrow"></i> -->
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="{{ route('major.index') }}">
           <i class="ti-layout menu-icon"></i>
           <span class="menu-title">Jurusan</span>
@@ -120,9 +106,23 @@
           <i class="icon-book menu-icon"></i>
           <span class="menu-title">Mata Pelajaran</span>
             <!-- <i class="menu-arrow"></i> -->
-      </a>
-    </li>
-  </ul>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('student.index') }}">
+          <i class="icon-head menu-icon"></i>
+          <span class="menu-title">Siswa</span>
+          <!-- <i class="menu-arrow"></i> -->
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('teacher.index') }}">
+          <i class="icon-briefcase menu-icon"></i>
+          <span class="menu-title">Guru</span>
+          <!-- <i class="menu-arrow"></i> -->
+        </a>
+      </li>
+    </ul>
 </nav>
         <!-- partial -->
         <div class="main-panel">
