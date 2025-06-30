@@ -21,7 +21,7 @@ class Classes extends Model
 
     public function teachers() 
     {
-    return $this->belongsToMany(Teacher::class, 'class_teacher', 'class_id', 'teacher_id'); // Atau hasMany jika 1 kelas 1 guru
+    return $this->belongsTo(Teacher::class);
     }
 
     public function students()

@@ -26,8 +26,8 @@ class Attendance extends Model
     }
 
     public function student()
-{
-    return $this->belongsTo(Student::class, 'user_id', 'user_id');
-}
+    {
+        return $this->belongsTo(Student::class, 'user_id', 'user_id');
+    }
 
 }

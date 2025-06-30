@@ -14,6 +14,7 @@ class Student extends Model
         'major_id',
         'id',
         'nisn',
+        'label',
     ];
 
     public function user()

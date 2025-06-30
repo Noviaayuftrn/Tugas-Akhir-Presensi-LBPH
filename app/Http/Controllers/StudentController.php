@@ -44,11 +44,20 @@ class StudentController extends Controller
             'role' => 'siswa',
         ]);
 
+        // Buat label unik dari nama
+        $labelBase = strtolower(str_replace(' ', '_', $request->nama));
+        $label = $labelBase;
+        $counter = 1;
+        while (Student::where('label', $label)->exists()) {
+            $label = $labelBase . '_' . $counter++;
+        }
+
         Student::create([
             'user_id' => $user->id,
             'class_id' => $request->class_id,
             'major_id' => $request->major_id,
             'nisn' => $request->nisn,
+            'label' => $label,
         ]);
 
         return redirect()->route('student.index')->with('success', 'Data siswa berhasil ditambahkan');

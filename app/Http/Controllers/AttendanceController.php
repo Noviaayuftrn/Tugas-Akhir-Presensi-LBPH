@@ -38,9 +38,10 @@ class AttendanceController extends Controller
         ->latest('date')
         ->get();
 
-        // Pilih jadwal yang belum diisi atau statusnya 'alpa'
+        // ✅ Hanya ambil yang statusnya masih 'alpa'
         $openedSchedule = $openedSchedules->first(function ($schedule) {
-            return $schedule->attendances->isEmpty() || $schedule->attendances->first()->status == 'alpa';
+            $attendance = $schedule->attendances->first();
+            return !$attendance || $attendance->status === 'alpa';
         });
 
         return view('attendance.presensi_siswa', compact('openedSchedule'));
@@ -57,6 +58,15 @@ class AttendanceController extends Controller
         ]);
 
         $user = Auth::user();
+
+        // Validasi role
+        if ($user->role !== 'siswa') {
+            return response()->json([
+                'success' => false,
+                'message' => 'Hanya siswa yang diperbolehkan mengisi presensi.'
+            ]);
+        }
+
         $schedule = Schedule::findOrFail($request->schedule_id);
 
         // Batasi waktu pengisian presensi 2 jam sejak dibuka

@@ -27,66 +27,70 @@ class ApiController extends Controller
                 'schedule_id' => 'required|integer|exists:schedules,id',
             ]);
 
-            $base64Image = str_replace('data:image/png;base64,', '', $request->input('image'));
-            $base64Image = str_replace(' ', '+', $base64Image);
-            $imageData = base64_decode($base64Image);
-
-            $filename = 'capture_' . time() . '.png';
-            $filePath = public_path('images/' . $filename);
-            file_put_contents($filePath, $imageData);
-
-            if (!file_exists($filePath)) {
-                throw new \Exception("Gagal menyimpan file gambar.");
+            $user = auth()->user();
+            if ($user->role !== 'siswa') {
+                throw new \Exception("Hanya siswa yang dapat melakukan presensi.");
             }
+
+            $student = \App\Models\Student::where('user_id', $user->id)->first();
+            if (!$student) {
+                throw new \Exception("Data siswa tidak ditemukan.");
+            }
+
+            $expectedLabel = $student->label;
 
             $client = new \GuzzleHttp\Client();
             $response = $client->post('http://127.0.0.1:5000/predict', [
-                'multipart' => [
-                    [
-                        'name'     => 'image',
-                        'contents' => fopen($filePath, 'r'),
-                        'filename' => $filename,
-                    ],
-                ],
+                'headers' => ['Content-Type' => 'application/json'],
+                'json' => ['image' => $request->image],
             ]);
 
             $result = json_decode($response->getBody(), true);
 
             if (!isset($result['label'])) {
-                throw new \Exception("Respons dari Flask tidak valid.");
+                throw new \Exception("Label tidak ditemukan dari respons Flask.");
             }
 
-            $user = auth()->user();
-            $expectedLabel = strtolower(str_replace(' ', '_', $user->nama));
-            $student = Student::where('user_id', $user->id)->first();
+            $attendance = \App\Models\Attendance::where('user_id', $user->id)
+                ->where('schedule_id', $request->schedule_id)
+                ->first();
 
-            if (!$student) {
-                throw new \Exception("Data siswa tidak ditemukan.");
+            if (!$attendance) {
+                throw new \Exception("Data presensi tidak tersedia.");
             }
 
+            if ($attendance->status !== 'alpa') {
+                return response()->json([
+                    'status' => 'fail',
+                    'message' => 'Presensi sudah dilakukan sebelumnya.',
+                ]);
+            }
+
+            // Cocokkan wajah (label dari model LBPH) dengan akun siswa login
             if ($result['label'] === $expectedLabel) {
-                Attendance::updateOrCreate(
-                    ['user_id' => $student->id, 'schedule_id' => $request->input('schedule_id')],
-                    ['status' => 'hadir']
-                );
+                $attendance->status = 'hadir';
+                $attendance->save();
+
+                \Log::info('Presensi berhasil dicatat untuk: ' . $expectedLabel);
 
                 return response()->json([
                     'status'     => 'success',
-                    'message'    => 'Presensi berhasil dicatat',
                     'student'    => $user->nama,
                     'confidence' => $result['confidence'],
                     'redirect'   => route('student.attendance'),
                 ]);
             } else {
+                \Log::warning('Label mismatch: ' . $result['label'] . ' ≠ ' . $expectedLabel);
+
                 return response()->json([
                     'status'  => 'fail',
                     'message' => 'Wajah tidak cocok (' . $result['label'] . ' ≠ ' . $expectedLabel . ')',
                 ]);
             }
 
+
         } catch (\Exception $e) {
             \Log::error('Presensi error: ' . $e->getMessage());
-            \Log::error($e->getTraceAsString());
 
             return response()->json([
                 'status'  => 'error',
