@@ -165,7 +165,7 @@
                           <form action="{{ route('major.destroy', $major) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                          <button class="btn btn-sm btn-danger" title="Hapus">
+                          <button class="btn btn-sm btn-danger" title="Hapus" type="submit" onclick="return confirm('Yakin hapus jurusan ini?')">
                             <i class="fas fa-trash-alt"></i>
                           </button>
                           </form>
