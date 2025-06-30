@@ -102,7 +102,7 @@
         </a>
       </li>  
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('subject.index') }}">
+        <a class="nav-link" href="{{ route('subject.index') }}"> 
           <i class="icon-book menu-icon"></i>
           <span class="menu-title">Mata Pelajaran</span>
             <!-- <i class="menu-arrow"></i> -->

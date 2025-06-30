@@ -41,5 +41,6 @@ class Teacher extends Model
     {
         return $this->belongsTo(Subject::class, 'sub_id');
     }
+    
 }
 

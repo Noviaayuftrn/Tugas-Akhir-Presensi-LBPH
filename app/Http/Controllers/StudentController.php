@@ -31,7 +31,7 @@ class StudentController extends Controller
         $request->validate([
             'nama' => 'required',
             'username' => 'required|unique:users',
-            'password' => 'required|min:6',
+            'password' => 'required|min:8',
             'class_id' => 'required|exists:classes,id',
             'major_id' => 'required|exists:majors,id',
             'nisn' => 'required|numeric|unique:students',

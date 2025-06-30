@@ -35,7 +35,7 @@ class TeacherController extends Controller
         $request->validate([
             'nama' => 'required',
             'username' => 'required|unique:users',
-            'password' => 'required|min:6',
+            'password' => 'required|min:8',
             'nip' => 'required|numeric|unique:teachers',
             'class_id' => 'required|exists:classes,id',
             'major_id' => 'required|exists:majors,id',
