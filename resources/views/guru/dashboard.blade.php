@@ -81,12 +81,6 @@
                             <span class="menu-title">Catatan Kehadiran</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/forms/laporan.html">
-                            <i class="icon-clipboard menu-icon"></i>
-                            <span class="menu-title">Laporan</span>
-                        </a>
-                    </li>
                 </ul>
             </nav>
             <div class="main-panel">
@@ -94,7 +88,7 @@
                     <div class="row">
                         <div class="col-md-12 grid-margin">
                             <div class="row">
-                                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                                <!-- <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                                     <h3 class="font-weight-bold">Pratinjau kehadiran seluruh kelas</h3>
                                 </div>
                                 <div class="col-12 col-xl-4">
@@ -116,7 +110,7 @@
                                         <p class="card-title">Grafik Kehadiran Seluruh Kelas</p>
                                     </div>
                                     <p class="text-muted">Grafik ini menampilkan tren kehadiran siswa dari seluruh kelas (X, XI, XII) dari waktu ke waktu.</p>
-                                    <!-- <p class="text-muted text-center mb-1">Tahun 2025</p> -->
+                                    <!-- <p class="text-muted text-center mb-1">Tahun 2025</p>
                                     <div id="attendance-chart-all-legend" class="chartjs-legend mt-4 mb-2"></div>
                                     <canvas id="attendance-chart-all" height="100"></canvas>
                                     <hr class="my-4">
@@ -151,7 +145,30 @@
                                 </div>
                             </div>
                         </div>    
-                    </div>
+                    </div> -->
+                    <h2 class="text-lg font-semibold mb-4">Rekap Kehadiran 7 Hari Terakhir</h2>
+                    <table class="table-auto w-full border text-sm">
+                    <thead class="bg-gray-200">
+                        <tr>
+                        <th class="px-3 py-2">Tanggal</th>
+                        <th class="px-3 py-2">Hadir</th>
+                        <th class="px-3 py-2">Tidak Hadir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse ($rekap as $item)
+                        <tr>
+                        <td class="border px-3 py-2">{{ \Carbon\Carbon::parse($item->tanggal)->format('d M Y') }}</td>
+                        <td class="border px-3 py-2 text-green-600 font-semibold">{{ $item->hadir }}</td>
+                        <td class="border px-3 py-2 text-red-600">{{ $item->tidak_hadir }}</td>
+                        </tr>
+                        @empty
+                        <tr>
+                        <td colspan="3" class="text-center py-4 text-gray-500">Belum ada data presensi</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                    </table>
                 <footer class="text-center py-3 mt-5">
                     <div class="d-flex justify-content-center">
                     </div>

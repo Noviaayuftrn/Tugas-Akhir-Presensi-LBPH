@@ -117,12 +117,6 @@
         <i class="icon-check menu-icon"></i>
         <span class="menu-title">Catatan Kehadiran</span>
       </a>
-    <li class="nav-item">
-      <a class="nav-link" href="laporan.html">
-        <i class="icon-clipboard menu-icon"></i>
-        <span class="menu-title">Laporan</span>
-      </a>
-    </li>
   </ul>
 </nav>
         <!-- partial -->
