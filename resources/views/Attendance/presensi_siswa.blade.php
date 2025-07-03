@@ -133,25 +133,23 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @php
-                    $attendance = $openedSchedule->attendances->first();
-                  @endphp
+                  @foreach ($openedSchedules as $index => $openedSchedule)
+                    @php
+                      $attendance = $openedSchedule->attendances->first();
+                    @endphp
 
-                  @if(!$attendance || $attendance->status == 'alpa')
-                    <tr>
-                      <td>1</td>
-                      <td>{{ $openedSchedule->subject->nama_mapel ?? '-' }}</td>
-                      <td>
-                        <button class="btn btn-success btn-sm btn-custom" onclick="window.location.href='{{ route('presensi.capture', ['id' => $openedSchedule->id]) }}'">Hadir</button>
-                        <button class="btn btn-warning btn-sm btn-custom btn-presensi" data-status="sakit" data-schedule="{{ $openedSchedule->id }}">Sakit</button>
-                        <button class="btn btn-primary btn-sm btn-custom btn-presensi" data-status="izin" data-schedule="{{ $openedSchedule->id }}">Izin</button>
-                      </td>
-                    </tr>
-                  @else
-                    <tr>
-                      <td colspan="3" class="text-center">Presensi sudah diisi ({{ $attendance->status }}).</td>
-                    </tr>
-                  @endif
+                    @if(!$attendance || $attendance->status == 'alpa')
+                      <tr>
+                        td>{{ $index + 1 }}</td>
+                        <td>{{ $openedSchedule->subject->nama_mapel ?? '-' }}</td>
+                        <td>
+                          <button class="btn btn-success btn-sm btn-custom" onclick="window.location.href='{{ route('presensi.capture', ['id' => $openedSchedule->id]) }}'">Hadir</button>
+                          <button class="btn btn-warning btn-sm btn-custom btn-presensi" data-status="sakit" data-schedule="{{ $openedSchedule->id }}">Sakit</button>
+                          <button class="btn btn-primary btn-sm btn-custom btn-presensi" data-status="izin" data-schedule="{{ $openedSchedule->id }}">Izin</button>
+                        </td>
+                      </tr>
+                    @endif
+                  @endforeach
                 </tbody>
               </table>
             @else

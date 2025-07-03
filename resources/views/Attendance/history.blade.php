@@ -161,15 +161,6 @@
                       @endforeach
                   </select>
               </div>
-              <div class="form-group">
-                  <label for="mapelSelect">MataPelajaran</label>
-                  <select class="form-select" id="subject_filter" style="color: black !important;">
-                      <option value="">Pilih Mata Pelajaran</option>
-                      @foreach ($subjects as $subject)
-                          <option value="{{ $subject->id }}">{{ $subject->nama_mapel ?? $subject->name ?? 'Mapel '.$subject->id }}</option>
-                      @endforeach
-                  </select>
-              </div>
 
               <table class="table table-bordered">
                 <thead>
@@ -215,55 +206,40 @@
     {{-- Script untuk dropdown filter --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
-            // Load kelas berdasarkan jurusan
+            // Fungsi untuk load kelas berdasarkan jurusan
             function loadClasses(majorID) {
                 if (majorID) {
                     $.ajax({
                         url: '/get-classes/' + majorID,
                         type: "GET",
                         dataType: "json",
-                        success: function (data) {
-                            $('#class_filter').empty().append('<option value="">Pilih Kelas</option>');
-                            $.each(data, function (key, value) {
+                        success: function(data) {
+                            $('#class_filter').empty();
+                            $('#class_filter').append('<option value="">Pilih Kelas</option>');
+                            $.each(data, function(key, value) {
                                 $('#class_filter').append('<option value="' + value.id + '">' + (value.nama_kelas ?? value.name ?? 'Kelas ' + value.id) + '</option>');
                             });
                         }
                     });
                 } else {
-                    $('#class_filter').empty().append('<option value="">Semua Kelas</option>');
-                }
-            }
-
-            // Load mata pelajaran berdasarkan jurusan
-            function loadSubjects(majorID) {
-                if (majorID) {
-                    $.ajax({
-                        url: '/get-subjects/' + majorID,
-                        type: "GET",
-                        dataType: "json",
-                        success: function (data) {
-                            $('#subject_filter').empty().append('<option value="">Pilih Mata Pelajaran</option>');
-                            $.each(data, function (key, value) {
-                                $('#subject_filter').append('<option value="' + value.id + '">' + (value.nama_mapel ?? value.name ?? 'Mapel ' + value.id) + '</option>');
-                            });
-                        }
-                    });
-                } else {
-                    $('#subject_filter').empty().append('<option value="">Semua Mata Pelajaran</option>');
+                    $('#class_filter').empty();
+                    $('#class_filter').append('<option value="">Semua Kelas</option>');
                 }
             }
 
             // Saat jurusan diubah
-            $('#major_filter').change(function () {
+            $('#major_filter').change(function() {
                 var majorID = $(this).val();
-                console.log("Jurusan dipilih: ", majorID); // debug
                 loadClasses(majorID);
-                loadSubjects(majorID);
+
+                // Opsional: bisa tambahkan filter table disini kalau mau filter daftar guru secara live
+                // misalnya pakai AJAX atau Javascript DOM filter
             });
 
-            // Jika ingin, tambahkan filter ke tabel saat #class_filter atau #subject_filter berubah
+            // Jika mau, bisa tambahkan event change pada #class_filter untuk filter table
+
         });
     </script>
 

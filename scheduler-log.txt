@@ -125,3 +125,183 @@ Fri 07/04/2025  4:41:58.87
   2025-07-04 04:41:59 Running ["artisan" schedule:close-expired] ....................................... 429.47ms DONE
   ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
 
+Fri 07/04/2025  4:42:58.90 
+
+  2025-07-04 04:42:59 Running ["artisan" schedule:close-expired] ....................................... 425.57ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:43:58.89 
+
+  2025-07-04 04:43:59 Running ["artisan" schedule:close-expired] ....................................... 439.21ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:44:58.86 
+
+  2025-07-04 04:44:59 Running ["artisan" schedule:close-expired] ....................................... 428.46ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:45:58.86 
+
+  2025-07-04 04:45:59 Running ["artisan" schedule:close-expired] ....................................... 433.52ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:46:58.88 
+
+  2025-07-04 04:46:59 Running ["artisan" schedule:close-expired] ....................................... 642.26ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:47:58.85 
+
+  2025-07-04 04:47:59 Running ["artisan" schedule:close-expired] ....................................... 423.09ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:48:58.86 
+
+  2025-07-04 04:48:59 Running ["artisan" schedule:close-expired] ....................................... 430.77ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:49:58.91 
+
+  2025-07-04 04:49:59 Running ["artisan" schedule:close-expired] ....................................... 415.98ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:50:58.87 
+
+  2025-07-04 04:50:59 Running ["artisan" schedule:close-expired] ....................................... 439.43ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:51:58.87 
+
+  2025-07-04 04:51:59 Running ["artisan" schedule:close-expired] ....................................... 432.72ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:52:58.90 
+
+  2025-07-04 04:52:59 Running ["artisan" schedule:close-expired] ....................................... 434.67ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:53:58.86 
+
+  2025-07-04 04:53:59 Running ["artisan" schedule:close-expired] ....................................... 446.04ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:54:58.89 
+
+  2025-07-04 04:54:59 Running ["artisan" schedule:close-expired] ....................................... 428.24ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:55:58.88 
+
+  2025-07-04 04:55:59 Running ["artisan" schedule:close-expired] ....................................... 434.50ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:56:58.87 
+
+  2025-07-04 04:56:59 Running ["artisan" schedule:close-expired] ....................................... 423.19ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:57:58.87 
+
+  2025-07-04 04:57:59 Running ["artisan" schedule:close-expired] ....................................... 424.76ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:58:58.86 
+
+  2025-07-04 04:58:59 Running ["artisan" schedule:close-expired] ....................................... 424.36ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:59:58.87 
+
+  2025-07-04 04:59:59 Running ["artisan" schedule:close-expired] ....................................... 432.14ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:00:58.86 
+
+  2025-07-04 05:00:59 Running ["artisan" schedule:close-expired] ....................................... 427.69ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:01:58.87 
+
+  2025-07-04 05:01:59 Running ["artisan" schedule:close-expired] ....................................... 434.09ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:02:58.87 
+
+  2025-07-04 05:02:59 Running ["artisan" schedule:close-expired] ....................................... 426.30ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:03:58.85 
+
+  2025-07-04 05:03:59 Running ["artisan" schedule:close-expired] ....................................... 423.43ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:04:58.86 
+
+  2025-07-04 05:04:59 Running ["artisan" schedule:close-expired] ....................................... 419.17ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:05:58.87 
+
+  2025-07-04 05:05:59 Running ["artisan" schedule:close-expired] ....................................... 424.23ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:06:58.85 
+
+  2025-07-04 05:06:59 Running ["artisan" schedule:close-expired] ....................................... 424.80ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:07:58.87 
+
+  2025-07-04 05:07:59 Running ["artisan" schedule:close-expired] ....................................... 421.56ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:08:58.85 
+
+  2025-07-04 05:08:59 Running ["artisan" schedule:close-expired] ....................................... 433.34ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:09:58.91 
+
+  2025-07-04 05:09:59 Running ["artisan" schedule:close-expired] ....................................... 440.62ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:10:58.85 
+
+  2025-07-04 05:10:59 Running ["artisan" schedule:close-expired] ....................................... 434.24ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:11:58.86 
+
+  2025-07-04 05:11:59 Running ["artisan" schedule:close-expired] ....................................... 419.29ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:12:58.86 
+
+  2025-07-04 05:12:59 Running ["artisan" schedule:close-expired] ....................................... 435.08ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:13:58.87 
+
+  2025-07-04 05:13:59 Running ["artisan" schedule:close-expired] ....................................... 430.91ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:14:58.86 
+
+  2025-07-04 05:14:59 Running ["artisan" schedule:close-expired] ....................................... 425.56ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:15:58.86 
+
+  2025-07-04 05:15:59 Running ["artisan" schedule:close-expired] ....................................... 411.74ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:16:58.87 
+
+  2025-07-04 05:16:59 Running ["artisan" schedule:close-expired] ....................................... 443.07ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:17:58.87 
+
+  2025-07-04 05:17:59 Running ["artisan" schedule:close-expired] ....................................... 420.90ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+

@@ -67,16 +67,16 @@ class AttendanceController extends Controller
             ]);
         }
 
-        $schedule = Schedule::findOrFail($request->schedule_id);
+        // $schedule = Schedule::findOrFail($request->schedule_id);
 
-        // Batasi waktu pengisian presensi 2 jam sejak dibuka
-        $openedAt = $schedule->updated_at;
-        if (now()->diffInMinutes($openedAt) > 120) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Waktu pengisian presensi telah habis.'
-            ]);
-        }
+        // // Batasi waktu pengisian presensi 2 jam sejak dibuka
+        // $openedAt = $schedule->updated_at;
+        // if (now()->diffInMinutes($openedAt) > 120) {
+        //     return response()->json([
+        //         'success' => false,
+        //         'message' => 'Waktu pengisian presensi telah habis.'
+        //     ]);
+        // }
 
         // Cari entri attendance siswa
         $attendance = Attendance::where('schedule_id', $request->schedule_id)
@@ -90,13 +90,13 @@ class AttendanceController extends Controller
             ]);
         }
 
-        // Jika sudah diisi sebelumnya
-        if ($attendance->status !== 'alpa') {
-            return response()->json([
-                'success' => false,
-                'message' => 'Presensi sudah diisi sebelumnya.'
-            ]);
-        }
+        // // Jika sudah diisi sebelumnya
+        // if ($attendance->status !== 'alpa') {
+        //     return response()->json([
+        //         'success' => false,
+        //         'message' => 'Presensi sudah diisi sebelumnya.'
+        //     ]);
+        // }
 
         // Update status presensi
         $attendance->status = $request->status;

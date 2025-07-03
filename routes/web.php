@@ -64,8 +64,7 @@ Route::middleware(['auth', RoleMiddleware::class . ':admin'])->group(function ()
 Route::middleware(['auth', RoleMiddleware::class . ':guru'])->group(function () {
     Route::get('/dashboard-guru', [DashboardAdminController::class, 'dashboardGuru'])->name('guru.dashboard');
     Route::get('/guru/schedule', [ScheduleController::class, 'guruIndex'])->name('attendance.guru_index');
-    Route::get('/get-subjects/{major}', [ScheduleController::class, 'getSubjects'])->name('schedule.getSubjects');
-    Route::get('/get-classes/{major}', [ScheduleController::class, 'getClassesByMajorSc'])->name('schedule.getClassesByMajorSc');
+    Route::get('/filter-subjects', [ScheduleController::class, 'filterSub'])->name('subject.filterSub');
     Route::post('/guru/schedule/open', [ScheduleController::class, 'openSchedule'])->name('schedule.open');
 
     // Menampilkan form tambah schedule

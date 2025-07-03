@@ -142,16 +142,34 @@ class ScheduleController extends Controller
         return redirect()->route('attendance.guru_index')->with('success', 'Presensi berhasil dibuka!');
     }
 
-    public function getSubjects($majorId)
-    {
-        $subjects = Subject::where('major_id', $majorId)->get();
-        return response()->json($subjects);
-    }
+    // public function getSubjects($majorId)
+    // {
+    //     $subjects = Subject::where('major_id', $majorId)->get();
+    //     return response()->json($subjects);
+    // }
 
-    public function getClassesByMajorSc($major_id)
-    {
-        $classes = Classes::where('major_id', $major_id)->get();
-        return response()->json($classes);
-    }
+    // public function getClassesByMajorSc($major_id)
+    // {
+    //     $classes = Classes::where('major_id', $major_id)->get();
+    //     return response()->json($classes);
+    // }
 
-}
+    //  filter dropdown untuk index jadwal pada guru
+    public function filterSub(Request $request)
+    {
+        $query = Subject::with('class', 'major');
+
+        if ($request->major_id) {
+            $query->where('major_id', $request->major_id);
+        }
+
+        if ($request->class_id) {
+            $query->where('class_id', $request->class_id);
+        }
+
+        $subjects = $query->get();
+
+        // Return HTML partial (view yang hanya berisi <tbody> tabel)
+        return view('subject.partials.subject_table', compact('subjects'))->render();
+    }
+} 
