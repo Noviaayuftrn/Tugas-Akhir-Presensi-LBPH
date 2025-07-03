@@ -305,3 +305,402 @@ Fri 07/04/2025  5:17:58.87
   2025-07-04 05:17:59 Running ["artisan" schedule:close-expired] ....................................... 420.90ms DONE
   ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
 
+Fri 07/04/2025  5:18:58.85 
+
+  2025-07-04 05:18:59 Running ["artisan" schedule:close-expired] ....................................... 417.50ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:19:58.87 
+
+  2025-07-04 05:19:59 Running ["artisan" schedule:close-expired] ....................................... 423.54ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:20:58.85 
+
+  2025-07-04 05:20:59 Running ["artisan" schedule:close-expired] ....................................... 431.31ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:21:58.86 
+
+  2025-07-04 05:21:59 Running ["artisan" schedule:close-expired] ....................................... 424.97ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:22:58.85 
+
+  2025-07-04 05:22:59 Running ["artisan" schedule:close-expired] ....................................... 425.62ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:23:58.85 
+
+  2025-07-04 05:23:59 Running ["artisan" schedule:close-expired] ....................................... 406.76ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:24:58.86 
+
+  2025-07-04 05:24:59 Running ["artisan" schedule:close-expired] ....................................... 432.97ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:25:58.85 
+
+  2025-07-04 05:25:59 Running ["artisan" schedule:close-expired] ....................................... 424.24ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:26:58.84 
+
+  2025-07-04 05:26:59 Running ["artisan" schedule:close-expired] ....................................... 435.03ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:27:58.86 
+
+  2025-07-04 05:27:59 Running ["artisan" schedule:close-expired] ....................................... 416.82ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:28:58.88 
+
+  2025-07-04 05:28:59 Running ["artisan" schedule:close-expired] ....................................... 428.16ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:29:58.91 
+
+  2025-07-04 05:29:59 Running ["artisan" schedule:close-expired] ....................................... 422.56ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:30:58.87 
+
+  2025-07-04 05:30:59 Running ["artisan" schedule:close-expired] ....................................... 439.65ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:31:58.87 
+
+  2025-07-04 05:31:59 Running ["artisan" schedule:close-expired] ....................................... 419.38ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:32:58.89 
+
+  2025-07-04 05:32:59 Running ["artisan" schedule:close-expired] ....................................... 412.42ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:33:58.85 
+
+  2025-07-04 05:33:59 Running ["artisan" schedule:close-expired] ....................................... 418.92ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:34:58.86 
+
+  2025-07-04 05:34:59 Running ["artisan" schedule:close-expired] ....................................... 440.30ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  5:35:58.86 
+
+  2025-07-04 05:35:59 Running ["artisan" schedule:close-expired] ^CFri 07/04/2025  5:36:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:37:58.88 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:38:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:39:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:40:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:41:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:42:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:43:58.89 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:44:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:45:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:46:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:47:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:48:58.85 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:49:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:50:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:51:58.85 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:52:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:53:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:54:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:55:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:56:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:57:58.85 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:58:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  5:59:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:00:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:01:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:02:58.84 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:03:58.85 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:04:58.85 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:05:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:06:58.85 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:07:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:08:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:09:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:10:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:11:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:12:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:13:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:14:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:15:58.85 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:16:58.88 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:17:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:18:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:19:25.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:19:58.97 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:20:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:21:58.91 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:22:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:23:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:24:58.86 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:25:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:26:58.87 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:27:58.93 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:28:58.93 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:29:58.92 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:30:58.91 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:31:58.91 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:32:59.00 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:33:58.95 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:34:58.92 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:35:36.63 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:35:58.91 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:36:00.96 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:36:58.91 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:37:58.90 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:38:58.90 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:39:58.91 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:40:58.90 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:41:58.90 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:42:58.91 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:43:58.95 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:44:41.15 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:44:46.78 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:44:58.91 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:45:44.88 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:45:58.94 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:46:58.99 
+
+   INFO  No scheduled commands are ready to run.  
+
+Fri 07/04/2025  6:47:58.92 
+
+   INFO  No scheduled commands are ready to run.  
+

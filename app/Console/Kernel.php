@@ -15,18 +15,6 @@ class Kernel extends ConsoleKernel
         CloseExpiredSchedules::class,
     ];
 
-    protected function schedule(Schedule $schedule)
-    {
-        \Log::info('🔁 schedule() dijalankan: ' . now('Asia/Makassar'));
-        // Jalankan command untuk tutup presensi otomatis setiap 1 menit
-        $schedule->command('schedule:close-expired')
-         ->everyMinute()
-         ->timezone('Asia/Makassar')
-         ->evenInMaintenanceMode()
-         ->withoutOverlapping();
-
-    }
-
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
