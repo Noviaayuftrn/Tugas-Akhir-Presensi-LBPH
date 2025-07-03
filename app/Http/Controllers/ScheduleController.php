@@ -11,6 +11,7 @@ use App\Models\Subject;
 use App\Models\User;
 use App\Models\Attendance;
 use App\Models\Student;
+use Carbon\Carbon;
 
 class ScheduleController extends Controller
 {
@@ -18,6 +19,23 @@ class ScheduleController extends Controller
     public function guruIndex()
     {
         $teacherId = Auth::user()->teacher->id;
+
+        // Tutup otomatis semua jadwal yang sudah lewat
+        $openedSchedules = Schedule::where('teach_id', $teacherId)
+            ->where('status', 'open')
+            ->get();
+
+        foreach ($openedSchedules as $schedule) {
+            $jamSelesai = Carbon::parse($schedule->date . ' ' . $schedule->jam_selesai)
+                ->timezone('Asia/Makassar');
+
+            if (Carbon::now('Asia/Makassar')->gt($jamSelesai)) {
+                $schedule->status = 'closed';
+                $schedule->save();
+            }
+        }
+
+
         $schedules = Schedule::with(['class', 'subject', 'attendances.user.student'])
                         ->where('teach_id', $teacherId)
                         ->orderByDesc('date')
@@ -76,8 +94,8 @@ class ScheduleController extends Controller
             'major_id' => 'required',
             'sub_id' => 'required',
             'date' => 'required|date',
-            'jam_mulai' => 'required',
-            'jam_selesai' => 'required',
+            'jam_mulai' => 'required|date_format:H:i',
+            'jam_selesai' => 'required|date_format:H:i',
         ]);
 
         Schedule::create([
@@ -113,7 +131,7 @@ class ScheduleController extends Controller
             
         // Tambahkan entri presensi untuk setiap siswa jika belum ada
         foreach ($students as $student) {
-            Attendance::firstOrCreate([
+            Attendance::updateOrCreate([
                 'schedule_id' => $schedule->id,
                 'user_id' => $student->id,
             ], [
@@ -137,5 +155,3 @@ class ScheduleController extends Controller
     }
 
 }
-
-

@@ -1,0 +1,127 @@
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+Fri 07/04/2025  3:53:49.38 
+The system cannot find the path specified.
+Fri 07/04/2025  3:56:05.17 
+The system cannot find the path specified.
+Fri 07/04/2025  4:00:05.65 
+The system cannot find the path specified.
+Fri 07/04/2025  4:00:23.75 
+The system cannot find the path specified.
+Fri 07/04/2025  4:05:22.61 
+
+
+   Illuminate\Database\QueryException 
+
+  could not find driver (Connection: mysql, SQL: update `cache_locks` set `owner` = Fa5HDbWLxria4tio, `expiration` = 1751659523 where `key` = laravel_cache_framework\schedule-690e55e43cb582ec691162d3002f71476233752d and (`owner` = Fa5HDbWLxria4tio or `expiration` <= 1751573123))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:822
+    818▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    819▕                 );
+    820▕             }
+    821▕ 
+  ➜ 822▕             throw new QueryException(
+    823▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    824▕             );
+    825▕         }
+    826▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:66
+      PDOException::("could not find driver")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:66
+      PDO::__construct("mysql:host=127.0.0.1;port=3306;dbname=db-ta1", "root", Object(SensitiveParameterValue), [])
+
+Fri 07/04/2025  4:08:25.27 
+PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_mysql' (tried: C:\php\ext\pdo_mysql (The specified module could not be found), C:\php\ext\php_pdo_mysql.dll (The specified module could not be found)) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'pdo_mysql' (tried: C:\php\ext\pdo_mysql (The specified module could not be found), C:\php\ext\php_pdo_mysql.dll (The specified module could not be found)) in Unknown on line 0
+
+
+   Illuminate\Database\QueryException 
+
+  could not find driver (Connection: mysql, SQL: update `cache_locks` set `owner` = cIGXfyOLKk8VesSX, `expiration` = 1751659706 where `key` = laravel_cache_framework\schedule-690e55e43cb582ec691162d3002f71476233752d and (`owner` = cIGXfyOLKk8VesSX or `expiration` <= 1751573306))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:822
+    818▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    819▕                 );
+    820▕             }
+    821▕ 
+  ➜ 822▕             throw new QueryException(
+    823▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    824▕             );
+    825▕         }
+    826▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:66
+      PDOException::("could not find driver")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:66
+      PDO::__construct("mysql:host=127.0.0.1;port=3306;dbname=db-ta1", "root", Object(SensitiveParameterValue), [])
+
+Fri 07/04/2025  4:10:29.57 
+
+  2025-07-04 04:10:30 Running ["artisan" schedule:close-expired] ....................................... 866.75ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:33:15.96 
+
+  2025-07-04 04:33:16 Running ["artisan" schedule:close-expired] ....................................... 841.07ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:37:22.38 
+
+  2025-07-04 04:37:23 Running ["artisan" schedule:close-expired] ....................................... 857.76ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:39:42.45 
+
+  2025-07-04 04:39:42 Running ["artisan" schedule:close-expired] ....................................... 435.31ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:39:58.93 
+
+  2025-07-04 04:39:59 Running ["artisan" schedule:close-expired] ....................................... 427.46ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:40:58.92 
+
+  2025-07-04 04:40:59 Running ["artisan" schedule:close-expired] ....................................... 437.20ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
+Fri 07/04/2025  4:41:58.87 
+
+  2025-07-04 04:41:59 Running ["artisan" schedule:close-expired] ....................................... 429.47ms DONE
+  ⇂ "C:\laragon\bin\php\php-8.2.17-nts-Win32-vs16-x64\php.exe" "artisan" schedule:close-expired > "NUL" 2>&1  
+
