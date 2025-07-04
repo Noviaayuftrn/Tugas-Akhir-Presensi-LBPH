@@ -138,9 +138,9 @@
                       $attendance = $openedSchedule->attendances->first();
                     @endphp
 
-                    @if(!$attendance || $attendance->status == 'alpa')
+                    @if(!$attendance || $attendance->status == 'alpa') 
                       <tr>
-                        td>{{ $index + 1 }}</td>
+                        <td>{{ $index + 1 }}</td>
                         <td>{{ $openedSchedule->subject->nama_mapel ?? '-' }}</td>
                         <td>
                           <button class="btn btn-success btn-sm btn-custom" onclick="window.location.href='{{ route('presensi.capture', ['id' => $openedSchedule->id]) }}'">Hadir</button>

@@ -132,24 +132,6 @@
               </div>
               <div class="col-md-6 grid-margin stretch-card">
               </div>
-              <div class="form-group">
-                  <label for="jurusanSelect">Jurusan</label>
-                  <select class="form-select" id="major_filter" style="color: black !important;">
-                      <option value="">Pilih Jurusan</option>
-                      @foreach ($majors as $major)
-                            <option value="{{ $major->id }}">{{ $major->nama_jurusan ?? $major->name ?? 'Jurusan '.$major->id }}</option>
-                      @endforeach
-                  </select>
-              </div>
-              <div class="form-group">
-                  <label for="kelasSelect">Kelas</label>
-                  <select class="form-select" id="class_filter" style="color: black !important;">
-                      <option value="">Pilih Kelas</option>
-                      @foreach ($classes as $class)
-                          <option value="{{ $class->id }}">{{ $class->nama_kelas ?? $class->name ?? 'Kelas '.$class->id }}</option>
-                      @endforeach
-                  </select>
-              </div>
               <a href="{{ route('schedule.create') }}" class="btn btn-primary mb-3">Buka Kelas</a>
               <table class="table table-bordered">
                   <thead>
@@ -220,50 +202,6 @@
             });
         });
     </script>
-
-
-
-       {{-- Script untuk dropdown filter --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-
-            // Fungsi untuk load kelas berdasarkan jurusan
-            function loadClasses(majorID) {
-                if (majorID) {
-                    $.ajax({
-                        url: '/get-classes/' + majorID,
-                        type: "GET",
-                        dataType: "json",
-                        success: function(data) {
-                            $('#class_filter').empty();
-                            $('#class_filter').append('<option value="">Pilih Kelas</option>');
-                            $.each(data, function(key, value) {
-                                $('#class_filter').append('<option value="' + value.id + '">' + (value.nama_kelas ?? value.name ?? 'Kelas ' + value.id) + '</option>');
-                            });
-                        }
-                    });
-                } else {
-                    $('#class_filter').empty();
-                    $('#class_filter').append('<option value="">Semua Kelas</option>');
-                }
-            }
-
-            // Saat jurusan diubah
-            $('#major_filter').change(function() {
-                var majorID = $(this).val();
-                loadClasses(majorID);
-
-                // Opsional: bisa tambahkan filter table disini kalau mau filter daftar guru secara live
-                // misalnya pakai AJAX atau Javascript DOM filter
-            });
-
-            // Jika mau, bisa tambahkan event change pada #class_filter untuk filter table
-
-        });
-    </script>
-
-
 
     <!-- container-scroller -->
     <!-- plugins:js -->

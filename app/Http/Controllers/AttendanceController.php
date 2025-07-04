@@ -44,7 +44,7 @@ class AttendanceController extends Controller
             return !$attendance || $attendance->status === 'alpa';
         });
 
-        return view('attendance.presensi_siswa', compact('openedSchedule'));
+        return view('attendance.presensi_siswa', compact('openedSchedule', 'openedSchedules'));
     }
 
 
