@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Guru</title>
+    <title>Data Guru</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/feather/feather.css">
     <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
@@ -154,21 +154,23 @@
                   </select>
               </div>
             <a href="{{ route('teacher.create') }}" class="btn btn-primary mb-3">Tambah Guru</a>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th style="width: 3%;">No.</th>
-                        <th style="width: 10%;">NIP</th>
-                        <th style="width: 20%;">Nama</th>
-                        <th style="width: 20%;">Username</th>
-                        <th style="width: 20%;">Mata Pelajaran</th>
-                        <th style="width: 15%;">Aksi</th>
-                    </tr>
-                </thead>
-                <tbody id="teacher-table-body">
-                    @include('teacher.partials.teacher_table', ['teachers' => $teachers])
-                </tbody>
-            </table>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 3%;">No.</th>
+                            <th style="width: 10%;">NIP</th>
+                            <th style="width: 20%;">Nama</th>
+                            <th style="width: 20%;">Username</th>
+                            <th style="width: 20%;">Mata Pelajaran</th>
+                            <th style="width: 15%;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="teacher-table-body">
+                        @include('teacher.partials.teacher_table', ['teachers' => $teachers])
+                    </tbody>
+                </table>
+              </div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->

@@ -133,37 +133,39 @@
               <div class="col-md-6 grid-margin stretch-card">
               </div>
               <a href="{{ route('schedule.create') }}" class="btn btn-primary mb-3">Buka Kelas</a>
-              <table class="table table-bordered">
-                  <thead>
-                      <tr>
-                          <th style="width: 10%;">No</th>
-                          <th style="width: 50%;">Nama</th>
-                          <th style="width: 40%;">Keterangan</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                    @if($openedSchedule)
-                      @foreach($openedSchedule->attendances as $index => $attendance)
-                        <tr>
-                          <td>{{ $index + 1 }}</td>
-                          <td>{{ $attendance->user->nama ?? '-' }}</td>
-                          <td>
-                            <select class="form-control status-dropdown" data-id="{{ $attendance->id }}" style="color: black !important;">
-                              <option value="hadir" {{ $attendance->status == 'hadir' ? 'selected' : '' }}>Hadir</option>
-                              <option value="alpa" {{ $attendance->status == 'alpa' ? 'selected' : '' }}>Alpa</option>
-                              <option value="sakit" {{ $attendance->status == 'sakit' ? 'selected' : '' }}>Sakit</option>
-                              <option value="izin" {{ $attendance->status == 'izin' ? 'selected' : '' }}>Izin</option>
-                            </select>
-                          </td>
-                        </tr>
-                      @endforeach
-                    @else
-                      <tr>
-                        <td colspan="3" class="text-center">Belum ada jadwal yang dibuka</td>
-                      </tr>
-                    @endif
-                  </tbody>
-              </table>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              <th style="width: 10%;">No</th>
+                              <th style="width: 50%;">Nama</th>
+                              <th style="width: 40%;">Keterangan</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        @if($openedSchedule)
+                          @foreach($openedSchedule->attendances as $index => $attendance)
+                            <tr>
+                              <td>{{ $index + 1 }}</td>
+                              <td>{{ $attendance->user->nama ?? '-' }}</td>
+                              <td>
+                                <select class="form-control status-dropdown" data-id="{{ $attendance->id }}" style="color: black !important;">
+                                  <option value="hadir" {{ $attendance->status == 'hadir' ? 'selected' : '' }}>Hadir</option>
+                                  <option value="alpa" {{ $attendance->status == 'alpa' ? 'selected' : '' }}>Alpa</option>
+                                  <option value="sakit" {{ $attendance->status == 'sakit' ? 'selected' : '' }}>Sakit</option>
+                                  <option value="izin" {{ $attendance->status == 'izin' ? 'selected' : '' }}>Izin</option>
+                                </select>
+                              </td>
+                            </tr>
+                          @endforeach
+                        @else
+                          <tr>
+                            <td colspan="3" class="text-center">Belum ada jadwal yang dibuka</td>
+                          </tr>
+                        @endif
+                      </tbody>
+                  </table>
+                </div>
             </div>
           </div>
           <!-- content-wrapper ends -->

@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Presensi</title>
+    <title>Riwayat Absen</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('assets/vendors/feather/feather.css') }}">
     <link rel="stylesheet" href="{{asset('assets/vendors/ti-icons/css/themify-icons.css') }}">
@@ -132,42 +132,44 @@
                 </div>
               </form>
               <br>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th style="width:5%;">No</th>
-                    <th style="width:30%;">Guru Pengajar</th>
-                    <th style="width:30%;">Mata Pelajaran</th>
-                    <th style="width:30%;">Status Kehadiran</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @forelse ($attendances as $i => $att)
-                    <tr>
-                        <td>{{ $i + 1 }}</td>
-                        <td>{{ $att->schedule->teacher->user->nama ?? '-' }}</td>
-                        <td>{{ $att->schedule->subject->nama_mapel ?? '-' }}</td>
-                        <td>
-                            @php
-                                $badge = [
-                                    'hadir' => 'success',
-                                    'sakit' => 'warning',
-                                    'izin'  => 'primary',
-                                    'alpa'  => 'danger'
-                                ];
-                            @endphp
-                            <span class="badge bg-{{ $badge[$att->status] ?? 'secondary' }}">
-                                {{ ucfirst($att->status) }}
-                            </span>
-                        </td>
-                    </tr>
-                @empty
-                  <tr>
-                    <td colspan="4" class="text-center">Tidak ada data kehadiran</td>
-                  </tr>  
-                @endforelse
-                </tbody>
-              </table>
+              <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th style="width:5%;">No</th>
+                        <th style="width:30%;">Guru Pengajar</th>
+                        <th style="width:30%;">Mata Pelajaran</th>
+                        <th style="width:30%;">Status Kehadiran</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @forelse ($attendances as $i => $att)
+                        <tr>
+                            <td>{{ $i + 1 }}</td>
+                            <td>{{ $att->schedule->teacher->user->nama ?? '-' }}</td>
+                            <td>{{ $att->schedule->subject->nama_mapel ?? '-' }}</td>
+                            <td>
+                                @php
+                                    $badge = [
+                                        'hadir' => 'success',
+                                        'sakit' => 'warning',
+                                        'izin'  => 'primary',
+                                        'alpa'  => 'danger'
+                                    ];
+                                @endphp
+                                <span class="badge bg-{{ $badge[$att->status] ?? 'secondary' }}">
+                                    {{ ucfirst($att->status) }}
+                                </span>
+                            </td>
+                        </tr>
+                    @empty
+                      <tr>
+                        <td colspan="4" class="text-center">Tidak ada data kehadiran</td>
+                      </tr>  
+                    @endforelse
+                    </tbody>
+                  </table>
+                </div>  
               <!-- <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">

@@ -120,49 +120,50 @@
                         <div class="col-md-6 grid-margin stretch-card">
                         </div>
                         <h4>Buka Presensi Baru</h4>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th style="width: 5%;">No</th>
-                                    <th style="width: 20%;">Mata Pelajaran</th>
-                                    <th style="width: 5%;">Kelas</th>
-                                    <th style="width: 15%;">Tanggal</th>
-                                    <th style="width: 15%;">Jam</th>
-                                    <th style="width: 5%;">Status</th>
-                                    <th style="width: 5%;">Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($schedules as $i => $schedule)
-                                    <tr>
-                                        <td>{{ $i + 1 }}</td>
-                                        <td>{{ $schedule->subject->nama_mapel }}</td>
-                                        <td>{{ $schedule->class->nama_kelas }}</td>
-                                        <td>{{ \Carbon\Carbon::parse($schedule->date)->format('d-m-Y') }}</td>
-                                        <td>{{ $schedule->jam_mulai }} - {{ $schedule->jam_selesai }}</td>
-                                        <td>
-                                            @if ($schedule->status == 'open')
-                                                <span class="badge bg-success">Dibuka</span>
-                                            @else
-                                                <span class="badge bg-secondary">Belum Dibuka</span>
-                                            @endif
-                                        </td>
-                                        <td>
-                                            @if ($schedule->status == 'open')
-                                                <span class="text-muted">Sedang Aktif</span>
-                                            @else
-                                                <form action="{{ route('schedule.open') }}" method="POST" style="display:inline;">
-                                                    @csrf
-                                                    <input type="hidden" name="schedule_id" value="{{ $schedule->id }}">
-                                                    <button type="submit" class="btn btn-danger btn-sm">Buka Presensi</button>
-                                                </form>
-                                            @endif
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                        
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 5%;">No</th>
+                                            <th style="width: 20%;">Mata Pelajaran</th>
+                                            <th style="width: 5%;">Kelas</th>
+                                            <th style="width: 15%;">Tanggal</th>
+                                            <th style="width: 15%;">Jam</th>
+                                            <th style="width: 5%;">Status</th>
+                                            <th style="width: 5%;">Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($schedules as $i => $schedule)
+                                            <tr>
+                                                <td>{{ $i + 1 }}</td>
+                                                <td>{{ $schedule->subject->nama_mapel }}</td>
+                                                <td>{{ $schedule->class->nama_kelas }}</td>
+                                                <td>{{ \Carbon\Carbon::parse($schedule->date)->format('d-m-Y') }}</td>
+                                                <td>{{ $schedule->jam_mulai }} - {{ $schedule->jam_selesai }}</td>
+                                                <td>
+                                                    @if ($schedule->status == 'open')
+                                                        <span class="badge bg-success">Dibuka</span>
+                                                    @else
+                                                        <span class="badge bg-secondary">Belum Dibuka</span>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    @if ($schedule->status == 'open')
+                                                        <span class="text-muted">Sedang Aktif</span>
+                                                    @else
+                                                        <form action="{{ route('schedule.open') }}" method="POST" style="display:inline;">
+                                                            @csrf
+                                                            <input type="hidden" name="schedule_id" value="{{ $schedule->id }}">
+                                                            <button type="submit" class="btn btn-danger btn-sm">Buka Presensi</button>
+                                                        </form>
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
 
                         @if ($errors->any())
                             <div style="color: red;">

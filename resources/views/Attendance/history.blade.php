@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Presensi</title>
+    <title>Catatan Kehadiran</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('assets/vendors/feather/feather.css') }}">
     <link rel="stylesheet" href="{{asset('assets/vendors/ti-icons/css/themify-icons.css') }}">
@@ -142,37 +142,38 @@
               <div class="form-group">
               </div>
               <h4 class="mb-3">Catatan Kehadiran</h4>
-
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th style="width: 10%;">No</th>
-                    <th style="width: 50%;">Nama</th>
-                    <th style="width: 20%;">Kelas</th>
-                    <th style="width: 20%;">Tanggal</th>
-                    <th style="width: 40%;">Status Kehadiran</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @foreach($attendances as $index => $attendance)
-                  <tr>
-                    <td>{{ $index + 1 }}</td>
-                    <td>{{ $attendance->user->nama }}</td>
-                    <td>{{ $attendance->schedule->class->nama_kelas ?? '-' }}</td>
-                    <td>{{ $attendance->created_at->format('d-m-Y') }}</td>
-                    <td>
-                        <span class="badge 
-                            @if($attendance->status == 'hadir') bg-success
-                            @elseif($attendance->status == 'sakit') bg-warning
-                            @elseif($attendance->status == 'izin') bg-info
-                            @else bg-danger @endif">
-                            {{ ucfirst($attendance->status) }}
-                        </span>
-                    </td>
-                  </tr>
-                  @endforeach
-                </tbody>
-              </table>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th style="width: 10%;">No</th>
+                        <th style="width: 50%;">Nama</th>
+                        <th style="width: 20%;">Kelas</th>
+                        <th style="width: 20%;">Tanggal</th>
+                        <th style="width: 40%;">Status Kehadiran</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @foreach($attendances as $index => $attendance)
+                      <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ $attendance->user->nama }}</td>
+                        <td>{{ $attendance->schedule->class->nama_kelas ?? '-' }}</td>
+                        <td>{{ $attendance->created_at->format('d-m-Y') }}</td>
+                        <td>
+                            <span class="badge 
+                                @if($attendance->status == 'hadir') bg-success
+                                @elseif($attendance->status == 'sakit') bg-warning
+                                @elseif($attendance->status == 'izin') bg-info
+                                @else bg-danger @endif">
+                                {{ ucfirst($attendance->status) }}
+                            </span>
+                        </td>
+                      </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+                </div>
             </div>
           </div>
           <!-- content-wrapper ends -->

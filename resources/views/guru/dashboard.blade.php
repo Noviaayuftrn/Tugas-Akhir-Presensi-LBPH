@@ -147,28 +147,30 @@
                         </div>    
                     </div> -->
                     <h2 class="text-lg font-semibold mb-4">Rekap Kehadiran 7 Hari Terakhir</h2>
-                    <table class="table-auto w-full border text-sm">
-                    <thead class="bg-gray-200">
-                        <tr>
-                        <th class="px-3 py-2">Tanggal</th>
-                        <th class="px-3 py-2">Hadir</th>
-                        <th class="px-3 py-2">Tidak Hadir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse ($rekap as $item)
-                        <tr>
-                        <td class="border px-3 py-2">{{ \Carbon\Carbon::parse($item->tanggal)->format('d M Y') }}</td>
-                        <td class="border px-3 py-2 text-green-600 font-semibold">{{ $item->hadir }}</td>
-                        <td class="border px-3 py-2 text-red-600">{{ $item->tidak_hadir }}</td>
-                        </tr>
-                        @empty
-                        <tr>
-                        <td colspan="3" class="text-center py-4 text-gray-500">Belum ada data presensi</td>
-                        </tr>
-                        @endforelse
-                    </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table-auto w-full border text-sm">
+                        <thead class="bg-gray-200">
+                            <tr>
+                            <th class="px-3 py-2">Tanggal</th>
+                            <th class="px-3 py-2">Hadir</th>
+                            <th class="px-3 py-2">Tidak Hadir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($rekap as $item)
+                            <tr>
+                            <td class="border px-3 py-2">{{ \Carbon\Carbon::parse($item->tanggal)->format('d M Y') }}</td>
+                            <td class="border px-3 py-2 text-green-600 font-semibold">{{ $item->hadir }}</td>
+                            <td class="border px-3 py-2 text-red-600">{{ $item->tidak_hadir }}</td>
+                            </tr>
+                            @empty
+                            <tr>
+                            <td colspan="3" class="text-center py-4 text-gray-500">Belum ada data presensi</td>
+                            </tr>
+                            @endforelse
+                        </tbody>
+                        </table>
+                    </div>    
                 <footer class="text-center py-3 mt-5">
                     <div class="d-flex justify-content-center">
                     </div>

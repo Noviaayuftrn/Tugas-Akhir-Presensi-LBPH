@@ -123,38 +123,40 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <h3 class="font-weight-bold mb-4">Presensi</h3>
-            @if($openedSchedule)
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th style="width: 10%;">No</th>
-                    <th style="width: 50%;">Mata Pelajaran</th>
-                    <th style="width: 40%;">Status Kehadiran</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @foreach ($openedSchedules as $index => $openedSchedule)
-                    @php
-                      $attendance = $openedSchedule->attendances->first();
-                    @endphp
-
-                    @if(!$attendance || $attendance->status == 'alpa') 
+              <div class="table-responsive">
+                @if($openedSchedule)
+                  <table class="table table-bordered">
+                    <thead>
                       <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ $openedSchedule->subject->nama_mapel ?? '-' }}</td>
-                        <td>
-                          <button class="btn btn-success btn-sm btn-custom" onclick="window.location.href='{{ route('presensi.capture', ['id' => $openedSchedule->id]) }}'">Hadir</button>
-                          <button class="btn btn-warning btn-sm btn-custom btn-presensi" data-status="sakit" data-schedule="{{ $openedSchedule->id }}">Sakit</button>
-                          <button class="btn btn-primary btn-sm btn-custom btn-presensi" data-status="izin" data-schedule="{{ $openedSchedule->id }}">Izin</button>
-                        </td>
+                        <th style="width: 10%;">No</th>
+                        <th style="width: 50%;">Mata Pelajaran</th>
+                        <th style="width: 40%;">Status Kehadiran</th>
                       </tr>
-                    @endif
-                  @endforeach
-                </tbody>
-              </table>
-            @else
-              <p class="text-center mt-4">Tidak ada jadwal presensi terbuka saat ini.</p>
-            @endif
+                    </thead>
+                    <tbody>
+                      @foreach ($openedSchedules as $index => $openedSchedule)
+                        @php
+                          $attendance = $openedSchedule->attendances->first();
+                        @endphp
+
+                        @if(!$attendance || $attendance->status == 'alpa') 
+                          <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ $openedSchedule->subject->nama_mapel ?? '-' }}</td>
+                            <td>
+                              <button class="btn btn-success btn-sm btn-custom" onclick="window.location.href='{{ route('presensi.capture', ['id' => $openedSchedule->id]) }}'">Hadir</button>
+                              <button class="btn btn-warning btn-sm btn-custom btn-presensi" data-status="sakit" data-schedule="{{ $openedSchedule->id }}">Sakit</button>
+                              <button class="btn btn-primary btn-sm btn-custom btn-presensi" data-status="izin" data-schedule="{{ $openedSchedule->id }}">Izin</button>
+                            </td>
+                          </tr>
+                        @endif
+                      @endforeach
+                    </tbody>
+                  </table>
+                @else
+                  <p class="text-center mt-4">Tidak ada jadwal presensi terbuka saat ini.</p>
+                @endif
+              </div>  
           </div>
         </div>
 

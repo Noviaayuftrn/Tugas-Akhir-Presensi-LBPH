@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Mata Pelajaran</title>
+    <title>Data Mapel</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/feather/feather.css">
     <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
@@ -176,20 +176,22 @@
                   </select>
               </div>
               <a href="{{ route('subject.create') }}" class="btn btn-primary mb-3">Tambah Mata Pelajaran</a>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th style="width: 5%;">No</th>
-                    <th style="width: 35%;">Mata Pelajaran</th>
-                    <th style="width: 35%;">Jurusan</th>
-                    <th style="width: 20%;">Kelas</th>
-                    <th style="width: 20%;">Aksi</th>
-                  </tr>
-                </thead>
-                <tbody id="subject-table-body">
-                  @include('subject.partials.subject_table', ['subjects' => $subjects])
-                </tbody>
-              </table>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 5%;">No</th>
+                      <th style="width: 35%;">Mata Pelajaran</th>
+                      <th style="width: 35%;">Jurusan</th>
+                      <th style="width: 20%;">Kelas</th>
+                      <th style="width: 20%;">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="subject-table-body">
+                    @include('subject.partials.subject_table', ['subjects' => $subjects])
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

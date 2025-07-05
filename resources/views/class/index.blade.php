@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Guru</title>
+    <title>Data Kelas</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/feather/feather.css">
     <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
@@ -141,39 +141,41 @@
               <div class="col-md-6 grid-margin stretch-card">
               </div>
             <a href="{{ route('class.create') }}" class="btn btn-primary mb-3">Tambah Kelas</a>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th style="width: 10%;">No</th>
-                        <th style="width: 30%;">Nama Kelas</th>
-                        <th style="width: 45%;">Jurusan</th>
-                        <th style="width: 25%;">Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  @forelse ($classes as $class)
-                    <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      <td>{{ $class->nama_kelas }}</td>
-                      <td>{{ $class->major->nama_jurusan ?? '-' }}</td>
-                      <td>
-                          <a href="{{ route('class.edit', $class->id) }}" class="btn btn-sm btn-warning me-1" title="Edit">
-                            <i class="fas fa-edit"></i>
-                          </a>
-                          <form action="{{ route('class.destroy', $class->id) }}" method="POST" style="display:inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-sm btn-danger" title="Hapus" type="submit" onclick="return confirm('Yakin hapus kelas ini?')">
-                              <i class="fas fa-trash-alt"></i>
-                            </button>
-                          </form>
-                        </td>
-                    </tr>
-                  @empty
-                      <tr><td colspan="4" style="text-align: center;">Belum ada data kelas</td></tr>
-                  @endforelse
-                </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th style="width: 10%;">No</th>
+                          <th style="width: 30%;">Nama Kelas</th>
+                          <th style="width: 45%;">Jurusan</th>
+                          <th style="width: 20%;">Aksi</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    @forelse ($classes as $class)
+                      <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $class->nama_kelas }}</td>
+                        <td>{{ $class->major->nama_jurusan ?? '-' }}</td>
+                        <td>
+                            <a href="{{ route('class.edit', $class->id) }}" class="btn btn-sm btn-warning me-1" title="Edit">
+                              <i class="fas fa-edit"></i>
+                            </a>
+                            <form action="{{ route('class.destroy', $class->id) }}" method="POST" style="display:inline;">
+                              @csrf
+                              @method('DELETE')
+                              <button class="btn btn-sm btn-danger" title="Hapus" type="submit" onclick="return confirm('Yakin hapus kelas ini?')">
+                                <i class="fas fa-trash-alt"></i>
+                              </button>
+                            </form>
+                          </td>
+                      </tr>
+                    @empty
+                        <tr><td colspan="4" style="text-align: center;">Belum ada data kelas</td></tr>
+                    @endforelse
+                  </tbody>
+              </table>
+            </div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->

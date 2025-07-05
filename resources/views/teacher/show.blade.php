@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Guru</title>
+    <title>Data Guru</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('assets/vendors/feather/feather.css') }}">
     <link rel="stylesheet" href="{{asset('assets/vendors/ti-icons/css/themify-icons.css') }}">
@@ -131,28 +131,30 @@
               <div class="col-md-6 grid-margin stretch-card">
               </div>
               <h3>Detail Guru</h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th style="width: 10%;">NIP</th>
-                            <th style="width: 20%;">Nama</th>
-                            <th style="width: 20%;">Username</th>
-                            <th style="width: 20%;">Jurusan</th>
-                            <th style="width: 15%;">Kelas</th>
-                            <th style="width: 20%;">Mapel</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{ $teacher->nip }}</td>
-                            <td>{{ $teacher->user->nama }}</td>
-                            <td>{{ $teacher->user->username }}</td>
-                            <td>{{ $teacher->major->nama_jurusan ?? '-' }}</td>
-                            <td>{{ $teacher->class->nama_kelas ?? '-' }}</td>
-                            <td>{{ $teacher->subject->nama_mapel ?? '-' }}</td>
-                        </tr>
-                    </tbody>
-            </table>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              <th style="width: 10%;">NIP</th>
+                              <th style="width: 20%;">Nama</th>
+                              <th style="width: 20%;">Username</th>
+                              <th style="width: 20%;">Jurusan</th>
+                              <th style="width: 15%;">Kelas</th>
+                              <th style="width: 20%;">Mapel</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>{{ $teacher->nip }}</td>
+                              <td>{{ $teacher->user->nama }}</td>
+                              <td>{{ $teacher->user->username }}</td>
+                              <td>{{ $teacher->major->nama_jurusan ?? '-' }}</td>
+                              <td>{{ $teacher->class->nama_kelas ?? '-' }}</td>
+                              <td>{{ $teacher->subject->nama_mapel ?? '-' }}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                </div>  
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->

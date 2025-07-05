@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Siswa</title>
+    <title>Data Siswa</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/feather/feather.css">
     <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
@@ -165,24 +165,26 @@
                   </select>
               </div>
               <a href="{{ route('student.create') }}" class="btn btn-primary mb-3">Tambah Siswa</a>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">No.</th>
-                            <th style="width: 10%;">NISN</th>
-                            <th style="width: 20%;">Nama Siswa</th>
-                            <th style="width: 20%;">Username</th>
-                            <th style="width: 15%;">Jurusan</th>
-                            <th style="width: 10%;">Kelas</th>
-                            <th style="width: 10%;">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody id="student-table-body">
-                        @include('student.partials.student_table', ['students' => $students])
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th style="width: 3%;">No.</th>
+                                <th style="width: 10%;">NISN</th>
+                                <th style="width: 20%;">Nama Siswa</th>
+                                <th style="width: 20%;">Username</th>
+                                <th style="width: 15%;">Jurusan</th>
+                                <th style="width: 10%;">Kelas</th>
+                                <th style="width: 10%;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-table-body">
+                            @include('student.partials.student_table', ['students' => $students])
+                        </tbody>
+                    </table>
+                </div>
+              </div>
             </div>
-          </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <!-- partial -->
